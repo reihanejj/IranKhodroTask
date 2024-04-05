@@ -1,0 +1,35 @@
+<link href="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+<script src="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<!------ Include the above in your HEAD tag ---------->
+
+<body>
+    <div id="login">
+        <div class="container">
+            <div id="login-row" class="row justify-content-center align-items-center">
+                <div id="login-column" class="col-md-6">
+                    <div id="login-box" class="col-md-12">
+                        <form id="login-form" class="form text-right" action="" method="post">
+                            <h3 class="text-center text-info pt-5">ورود به سیستم</h3>
+                            <p class="validation-alert" *ngFor="let item of validationError">{{ item }}</p>
+                            <div class="form-group">
+                                <label for="username" class="text-info">نام کاربری</label><br>
+                                <input type="text" name="username" id="username" class="form-control"
+                                    [(ngModel)]="username">
+                            </div>
+                            <div class="form-group">
+                                <label for="password" class="text-info">رمزعبور</label><br>
+                                <input type="text" name="password" id="password" class="form-control"
+                                    [(ngModel)]="password">
+                            </div>
+                            <div class="form-group">
+                                <button type="submit" name="submit" class="btn btn-info btn-md" value="submit"
+                                    (click)="onSubmit()">ورود</button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>

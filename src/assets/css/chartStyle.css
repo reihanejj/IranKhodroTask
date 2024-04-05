@@ -1,0 +1,58 @@
+.apexcharts-canvas.apexcharts-theme-light {
+    height: auto !important;
+    padding: 6% 0% 0% 0%;
+}
+
+.chart-box {
+    position: relative;
+    height: 100%;
+}
+
+.chart-box>.title {
+    position: absolute;
+    bottom: 2px;
+    display: flex;
+    align-content: center;
+    justify-content: center;
+    width: 100%;
+    align-items: center;
+}
+
+.changeChartBox-hide {
+    display: none;
+}
+
+.bx-chevron-right.box-open {
+    -o-transform: rotate(180deg);
+    -ms-transform: rotate(180deg);
+    -moz-transform: rotate(180deg);
+    -webkit-transform: rotate(180deg);
+    transform: rotate(180deg)
+}
+
+.bx-chevron-right {
+    transition: 1s;
+}
+
+.apexcharts-toolbar {
+    direction: ltr;
+}
+
+.button-box {
+    display: flex;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 64%;
+    justify-content: space-between;
+    z-index: 100;
+}
+
+.apx-chart-box {
+    position: relative;
+    z-index: 10;
+}
+
+.button-box>div>button:hover>i {
+    text-shadow: 0 0 0.5px #000000e8;
+}

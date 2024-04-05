@@ -1,0 +1,106 @@
+<div class="card-body card-body-size text-right text-center text-info">
+
+    <div class="row">
+        <div class="col-2"></div>
+        <div class="col-8">
+            <h6 class="text-center text-info">لیست محصولات شرکت ایرانیان خودرو</h6>
+        </div>
+        <div class="col-2">
+            <button type="button" name="New" class="btn btn-info btn-md" (click)="OpenAddModal()">
+                ایجاد
+                <i class="fas fa-plus"></i>
+            </button>
+        </div>
+    </div>
+    <div class=" border-bottom p-3">
+    </div>
+
+    <table class="table table-bordered table-striped text">
+        <thead>
+            <tr>
+                <th scope="col">نام خودرو</th>
+                <th scope="col">مدل خودرو</th>
+                <th scope="col">قیمت خودرو</th>
+                <th scope="col">برقی</th>
+                <th scope="col">عملیات</th>
+            </tr>
+        </thead>
+        <tbody id="rows">
+            <tr *ngFor="let item of products;let i = index;">
+                <td>{{ item.name }}</td>
+                <td>{{ item.model }}</td>
+                <td>{{ item.price }}</td>
+                <td>
+                    <i class="fas fa-check isElectrical" *ngIf="item.electric"></i>
+                    <i class="fas fa-times isNotElectrical" *ngIf="!item.electric"></i>
+                </td>
+                <td>
+                    <button type="button" class="btn btn-icon btn-outline-danger mx-2" (click)="Delete(i)">
+                        <i class="fas fa-trash-alt"></i>
+                    </button>
+                    <button type="button" class="btn btn-icon btn-outline-primary mx-2" (click)="Edit(item)">
+                        <i class="far fa-edit"></i>
+                    </button>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+
+</div>
+
+<ng-template #modalTemplate let-modal>
+
+    <div class="modal-header border-bottom p-3">
+        <h6 class="text-center text-info" *ngIf="modalStateIsAdd">
+            ایجاد
+        </h6>
+        <h6 class="text-center text-info" *ngIf="!modalStateIsAdd">
+            ویرایش
+        </h6>
+    </div>
+    <div class="modal-body mx-3 flex-grow-0">
+        <form class="add-new-user pt-0" autofil autocomplete="false">
+            <div class="row modal-body-form">
+                <div class="col-6">
+                    <label for="carName">
+                        نام خودرو
+                    </label>
+                    <input type="text" id="carName" name="carName" class="form-control" [(ngModel)]="selectItem.name">
+                </div>
+                <div class="col-6">
+                    <label for="carModel">
+                        مدل خودرو
+                    </label>
+                    <input type="text" id="carModel" name="carModel" class="form-control"
+                        [(ngModel)]="selectItem.model">
+                </div>
+                <div class="col-6">
+                    <label for="carPrice">
+                        قیمت خودرو
+                    </label>
+                    <input type="text" id="carPrice" name="carPrice" class="form-control"
+                        [(ngModel)]="selectItem.price">
+                </div>
+                <div class="col-6">
+                    <label for="isElectrical">
+                        خودرو برقی است؟
+                    </label>
+                    <input type="checkbox" id="isElectrical" name="isElectrical" class="form-control"
+                        [(ngModel)]="selectItem.electric">
+                </div>
+
+            </div>
+        </form>
+    </div>
+    <div class="modal-footer border-top p-3">
+        <button type="submit" class="btn btn-primary me-sm-3 me-1 data-submit" (click)="Add()">
+            ثبت
+            <i class="fas fa-check"></i>
+        </button>
+        <button type="submit" class="btn btn-outline-secondary me-sm-3 me-1 data-submit" (click)="closeModal()">
+            بستن
+            <i class="fas fa-times"></i>
+        </button>
+    </div>
+
+</ng-template>

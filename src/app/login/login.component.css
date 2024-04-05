@@ -1,0 +1,13 @@
+.language-fix{
+    list-style-type: none;
+    display: inline-block;
+}
+
+.margin-xy{
+    margin-top: 0.5rem !important;
+    margin-bottom: 0.5rem !important
+}
+
+.validation-alert{
+    color:red;
+}

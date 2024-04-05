@@ -1,0 +1,6 @@
+{
+    "/api": {
+      "target": "https://sandbox.irkevaluation.ir",
+      "secure": false
+    }
+  }

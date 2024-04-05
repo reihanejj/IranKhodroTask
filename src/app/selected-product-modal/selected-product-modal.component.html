@@ -1,0 +1,38 @@
+
+    <div class="modal-header border-bottom p-3">
+      <h6 id="offcanvasAddUserLabel" class="offcanvas-title">SelectedProducts</h6>
+    </div>
+    <div class="modal-body mx-0 flex-grow-0">
+      <form class="add-new-user pt-0" autofil autocomplete="false">
+        <div class="row modal-body-form">
+            <table class="table table-bordered table-striped">
+                <thead>
+                    <tr>
+                        <th scope="col">Name</th>
+                        <th scope="col">Model</th>
+                        <th scope="col">price</th>
+                    </tr>
+                </thead>
+                <tbody id="rows">
+                    <tr *ngFor="let product of data.selectedProducts">
+                        <td>{{ product.name }}</td>
+                        <td>{{ product.model }}</td>
+                        <td>{{ product.price }}</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+      </form>
+    </div>
+    <div class="modal-footer border-top p-3">
+      <button
+        type="submit"
+        class="btn btn-primary me-sm-3 me-1 data-submit"
+      >Submit
+      </button>
+      <button
+        type="reset"
+        class="btn btn-label-secondary"
+      >Cancel
+      </button>
+    </div>

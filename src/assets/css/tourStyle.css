@@ -1,0 +1,27 @@
+.tour-background {
+    position: absolute;
+    box-shadow: 0px 0px 20px 9999px #00000087;
+    background-color: transparent;
+    display: block;
+    z-index: 100000;
+    transform: 1s;
+}
+
+.tour-hide {
+    display: none;
+    transform: 1s;
+}
+
+.tour-foreground {
+    position: absolute;
+    display: block;
+    z-index: 10000000;
+}
+
+.template-shown{
+    z-index: 1000000;
+}
+
+.tour-disable>*{
+    pointer-events: none;
+}

@@ -1,0 +1,38 @@
+.layout-demo-wrapper>* {
+    width: 100%;
+}
+
+.btn-transparent-light {
+    background-color: transparent !important;
+    box-shadow: none !important;
+}
+
+.btn-transparent-light:hover {
+    background-color: #e5e9ed !important;
+    box-shadow: 0 0.125rem 0.25rem rgba(147, 158, 170, 0.4) !important;
+    color: #263c55 !important;
+}
+
+th>button>i.bx-sort-alt-2,
+th>button>i.bx-sort-down,
+th>button>i.bx-sort-up {
+    transform: scale(1);
+}
+
+th>button>i.click {
+    transform: scale(1.2);
+}
+
+div.mat-mdc-form-field-subscript-wrapper.mat-mdc-form-field-bottom-align.ng-tns-c139-0{
+    height: 0.0001rem;
+}
+
+div.mat-mdc-text-field-wrapper.mdc-text-field.ng-tns-c139-0.mdc-text-field--filled{
+    display: flex;
+    align-items: flex-end;
+}
+
+div.mat-mdc-form-field-flex.ng-tns-c139-0{
+    align-items: flex-end;
+    min-height: 35px;
+}
