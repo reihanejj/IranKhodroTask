@@ -6,9 +6,11 @@
 <body>
     <div id="login">
         <div class="container">
-            <div id="login-row" class="row justify-content-center align-items-center">
-                <div id="login-column" class="col-md-6">
+            <div id="login-row" class="row justify-content-center align-items-center ">
+                <div id="login-column" class="col-md-6 card-box pt-2">
+                    <app-loading-component *ngIf="loading" ></app-loading-component>
                     <div id="login-box" class="col-md-12">
+
                         <form id="login-form" class="form text-right" action="" method="post">
                             <h3 class="text-center text-info pt-5">ورود به سیستم</h3>
                             <p class="validation-alert" *ngFor="let item of validationError">{{ item }}</p>

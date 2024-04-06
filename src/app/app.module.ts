@@ -12,12 +12,14 @@ import { LoginComponent } from './login/login.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { HomeComponent } from './home/home.component';
 import { MatDialogModule } from '@angular/material/dialog';
+import { LoadingComponentComponent } from './loading-component/loading-component.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     LoginComponent,
     HomeComponent,
+    LoadingComponentComponent,
   ],
   imports: [
     BrowserModule,

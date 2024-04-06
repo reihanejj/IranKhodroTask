@@ -11,3 +11,7 @@
 .validation-alert{
     color:red;
 }
+
+.card-box{
+    position: relative;
+}
