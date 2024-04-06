@@ -24,10 +24,6 @@ export class LoginComponent {
     try {
       if (this.username == null || this.username == '' ||
         this.password == null || this.password == '') {
-
-          
-
-        //TODO: Notification for requierd username and paswrod
         return;
       }
 
